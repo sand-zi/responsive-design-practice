@@ -24,5 +24,50 @@ body {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
 }
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Helpers */
+.flex{
+    display: flex;
+}
+
+.inline-flex{
+    display: inline-flex;
+}
+
+/* Layout */
+
+
+
+/* Header */
+
+
+/* Main */
+
+.main-content .title{
+    color: var(--clr-accent);
+    text-transform: uppercase;
+    margin: 0;
+    font-size: clamp(3rem, 10vw, 7rem);
+    line-height: 1;
+}
+
+.main-content .location{
+    color: var(--clr-icons);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+
+/* Footer */
