@@ -29,6 +29,8 @@ img {
 
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -36,26 +38,84 @@ a {
     text-decoration: none;
 }
 
+/* Buttons */
+
+.btn {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    color: var(--clr-txt);
+    font-size: 1.125rem;
+    display: inline-block;
+    padding: 0.5em;
+    position: relative;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    background: var(--clr-accent);
+    height: 0.75em;
+    width: 70%;
+    left: 0;
+    z-index: -1;
+    top: 50%;
+    transform-origin: bottom left;
+    transition: transform 250ms cubic-bezier(1, 0.26, 0.35, 1.32);
+}
+
+.btn:hover::after,
+.btn:focus::after {
+    transform: scale(1.4, 2);
+}
 
 /* Helpers */
-.flex{
+.flex {
     display: flex;
 }
 
-.inline-flex{
+.inline-flex {
     display: inline-flex;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.justify-space-around {
+    justify-content: space-around;
+}
+
+.align-center {
+    align-items: center;
 }
 
 /* Layout */
 
-
-
 /* Header */
+header {
+    margin: 2em 0;
+}
 
+.main-header .nav-link:hover,
+.main-header .nav-link:focus {
+    color: var(--clr-accent);
+}
 
 /* Main */
+.main-content {
+    margin-bottom: 2rem;
+}
 
-.main-content .title{
+.main-content .title {
     color: var(--clr-accent);
     text-transform: uppercase;
     margin: 0;
@@ -63,11 +123,18 @@ a {
     line-height: 1;
 }
 
-.main-content .location{
+.main-content .location {
     color: var(--clr-icons);
     margin: 0;
     font-size: 1.5rem;
+    margin-bottom: 1.5em;
 }
 
+.main-content .secondary-img-container {
+    gap: 0.5em;
+}
 
+.main-content .secondary-img-container img{
+    object-fit: cover;
+}
 /* Footer */
