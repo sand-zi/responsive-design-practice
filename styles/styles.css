@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --clr-icons: #929292;
+    --clr-txt: #fff;
+    --clr-bg-dark: #242424;
+    --clr-bg-light: #3b3b3b;
+    --clr-accent: #ff7600;
+}
+
+/* Basics */
+
+img {
+    width: 100%;
+}
